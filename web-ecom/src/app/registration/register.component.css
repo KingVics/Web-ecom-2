@@ -1,0 +1,8 @@
+.register_checkbox {
+    display: flex;
+    padding-top: 1rem;
+}
+.register_checkbox p {
+    color: #EB5926;
+    opacity: 1;
+}
