@@ -1,46 +1,45 @@
 .container-fluid{
   background: #F2F2F2 0% 0% no-repeat padding-box;
+  
   height: 57px;
 }
+
+.nav-padding {
+  padding: 0 3rem;
+}
+
 .icon{
   width: 18px;
   height: 18px;
-
   background-color:white;
 
 }
-
 
 .display-inline{
   display:flex;
   list-style-type: none;
   margin-left: 2em;
   justify-content: center;
-
-
-
 }
-.input-group-text{
 
+.input-group-text{
   background: white;
   height: 31px;
   border-radius: 10px;
-opacity: 1;
-
+  opacity: 1;
 }
+
 .input-group{
-
-    position:absolute;
-    right:25em;
-
+  position:absolute;
+  right:25em;
 }
 
-  .input-group-sm {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    width: 100%;
+.input-group-sm {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
 }
 
 .navbar-t {
@@ -49,39 +48,38 @@ opacity: 1;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-
 }
 
 .form-control{
   background: #ECECEC;
-
-height: 31px;
+  height: 31px;
 }
+
 .nav-left{
   margin: 1.2em 1em 0 1em;
-  height: 27px;
-
-font: normal normal bold 20px Segoe UI;
-letter-spacing: 0px;
-
-opacity: 1;
+  height: 27px; 
+  opacity: 1;
 }
+
 .navbar{
   height: 57px;
-background: #E1E1E1 0% 0% no-repeat padding-box;
-opacity:1
+  background: #E1E1E1 0% 0% no-repeat padding-box;
+  opacity:1
 }
+
 .navbar-nav a{
-  font: normal normal normal 20px Segoe UI;
+  /* font: normal normal normal 20px Segoe UI; */
   letter-spacing: 0px;
   color: #101010;
   opacity: 1;
 }
+
 .nav-left a{
   color: #101010;
   opacity: 1;
   text-align: center;
   margin-bottom: 1em;
+
 }
 .bg{
   background-color: white;
@@ -90,8 +88,8 @@ opacity:1
   .input-group{
    display: none;
   }
-
 }
+
 .form-inline-lg .form-control-lg {
   display: inline-block;
   width: auto;
@@ -101,34 +99,29 @@ opacity:1
   border-radius: 15px;
   opacity: 1;
 }
-@media screen and (max-width:559px){
 
+@media screen and (max-width:559px){
 .navbar-t {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: left;
-
 }
 
 .display-inline{
-position: absolute;
+  position: absolute;
   list-style-type: none;
   right: .5em;
   top: -.6em;
-
-
-
-
 }
-.nav-left{
 
+.nav-left{
   margin: 1.2em 0 0 1em;
 }
 
-
 }
+
 @media screen and (max-width:422px){
   .display-inline{
     position: absolute;
@@ -137,19 +130,14 @@ position: absolute;
       top: -.6em;
       margin-top: .5em;
 
-
-
-
     }
     .container-fluid{
       height: 51px;
     }
     .nav-left{
-font-size:15px ;
+      font-size:15px ;
       margin: 1.2em 0 0 1em;
     }
-
-
 }
 @media screen and (max-width:373px){
   .sm{
