@@ -10,8 +10,7 @@ import {RegistrationComponent} from './registration/register.component'
 @NgModule({
   declarations: [
     AppComponent,
-
-    NavbarComponent
+    NavbarComponent,
     LoginComponent,
     RegistrationComponent
   ],
