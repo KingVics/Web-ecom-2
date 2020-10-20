@@ -1,8 +1,23 @@
 .register_checkbox {
     display: flex;
+    justify-content: center;
     padding-top: 1rem;
 }
+
+.register_checkbox input {
+    margin-top: 3px;
+    cursor: pointer;
+}
+
 .register_checkbox p {
     color: #EB5926;
-    opacity: 1;
+    margin-left: 10px;
+}
+
+@media (max-width: 468px) {
+    .register_checkbox  {
+       padding-top: 0.5rem;
+       text-align: center;
+    }
+
 }

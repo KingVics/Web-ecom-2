@@ -1,4 +1,4 @@
-<section>
+<section [routerLink]="['/login']">
     <div class="container-sm">
         <div class="row">
             <div class="col-md-12 col-sm-12">
@@ -7,7 +7,12 @@
                         <img src="../../assets/logo/logo.png"  alt="sellIt_logo"/>
                     </div>
                     <div class="login_header_container">
-                       <h2 class="login_header">Login</h2>
+                        <div class="login_header__login">
+                            <a [routerLink]="['/login']">LogIn</a>
+                        </div>
+                        <div class="login_header__register">
+                            <a [routerLink]="['/signup']">Register</a>
+                        </div>     
                     </div>
                     <div class="">
                         <form>

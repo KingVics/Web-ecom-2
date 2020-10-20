@@ -1,7 +1,7 @@
 .container-fluid{
   background: #F2F2F2 0% 0% no-repeat padding-box;
-  
   height: 57px;
+  overflow: hidden;
 }
 
 .nav-padding {
