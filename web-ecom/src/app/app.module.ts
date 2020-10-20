@@ -6,13 +6,15 @@ import { LoginComponent } from './login/login.component'
 import {RegistrationComponent} from './registration/register.component'
 import {appRoutes} from './routes'
 import { RouterModule } from '@angular/router';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     LoginComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

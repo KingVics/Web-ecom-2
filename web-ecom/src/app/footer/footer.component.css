@@ -1,0 +1,28 @@
+.footer_style {
+   background: #1D1D1D;
+   border-radius: 15px 15px 0px 0px;
+   width: 100%;
+   height: min-content;
+   overflow: hidden;
+}
+
+.footer__header_container,
+.footer__content {
+   padding-top: 4rem;
+}
+
+.footer__header h2 {
+    color: #EB5926;
+    text-transform: uppercase;
+}
+
+.footer__content_list,
+.footer__content_term {
+    list-style-type: none;
+}
+
+.footer__content_list li,
+.footer__content_term li {
+    color: #FFFFFF;
+    margin: .5rem;
+}
