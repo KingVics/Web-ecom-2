@@ -1,6 +1,10 @@
+.login_section {
+ 
+}
 .container-sm {
     padding: 4rem 0;
     overflow: hidden;
+    
 }
 .login_card {
     width: 100%;
@@ -108,7 +112,7 @@
     opacity: 1;
 }
 
-@media (max-width: 468px)  {
+@media (max-width: 540px)  {
     .col-md-12, .col-sm-12 {
         padding: 0;
     }
@@ -125,5 +129,15 @@
 
     .login_header_container {
         padding: 0.5rem 0;
+    }
+}
+
+@media (min-width:800px)  and (max-width:1024px){
+    .login_section {
+        height: 70vh;
+    }
+
+    .login_card {
+        margin-top: 5rem;
     }
 }
