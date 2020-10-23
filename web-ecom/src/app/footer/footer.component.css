@@ -14,6 +14,9 @@
 .footer__header h2 {
     color: #EB5926;
     text-transform: uppercase;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .footer__content_list,
@@ -24,5 +27,143 @@
 .footer__content_list li,
 .footer__content_term li {
     color: #FFFFFF;
-    margin: .5rem;
+    margin: .8rem;
+    padding: 0.4rem 0;
+}
+
+.footer_form-control {
+   color: #FFFFFF;
+   margin-top: 2.2rem;
+}
+
+.footer_form-control .footer__form_element p {
+    margin: 0;
+    padding: 0.5rem 0;
+}
+
+.form__input input {
+    background: #ECECEC 0% 0% no-repeat padding-box;
+    border-radius: 8px;
+    width: 80%;
+    height: 35px;
+    padding: 0.2rem 0.3rem;
+    border: 1px solid #333;
+    outline: 0;
+}
+
+.form__input input[type="email"] {
+    padding-left: 20px;    
+}
+
+.form__input input[type="email"]:focus {
+    border-color: #EB5926;
+    box-shadow: 0 0 8px 0 #EB5926;
+    outline: none;
+}
+
+.form__input button {
+    position: absolute;
+    right: 2.5rem;
+    width: 102px;
+    height: 34px;
+    background: #EB5926;
+    color: #fff;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.form__socia_media {
+    color: #FFFFFF;
+    margin-top: 2rem;
+}
+
+.footer__social_header p {
+    margin: 0;
+    padding-top: 12px;
+    position: absolute;
+}
+
+.footer__icon ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 12rem;
+    /* left: 7rem;
+    bottom: -.85rem;  */
+    
+}
+
+.footer__icon li img {
+    width: 30px;
+}
+
+
+.footer__icon li {
+    list-style: none;
+    margin: 0.5rem;
+    cursor: pointer;
+    padding-bottom: 1rem;
+}
+
+
+li.footer_icon_facebook img{
+    /* left: -1rem;
+    top: -3.7rem;  */
+    
+}
+/*
+li.footer_icon_instagram {
+    right: -8.5rem;
+    bottom: 2.5rem;
+}
+
+li.footer_icon_twitter {
+    right: -12.5rem;
+    bottom: 2.5rem;
+} */
+
+@media (max-width:540px) {
+    .footer_style {
+        display: block;
+        text-align: center;   
+    }
+    .footer__header_container, .footer__content {
+        padding-top: 1.5rem;
+        margin: 0 auto;
+    }
+
+    .footer__content_term li,
+    .footer__content_list li {
+        margin: 0;
+    }
+
+    .footer__icon ul {
+        padding: 2.5rem 0 0;
+    }
+
+    .footer__social_header p {
+       right: 42%;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .footer__header_container,
+    .footer__content {
+        padding-top: 2rem;
+    }
+    .footer__header h2{
+        margin: 0;
+        padding-top: 1.5rem;
+        font-size: 1rem;
+    }
+    .footer__form_element {
+        padding-bottom: 1.5rem;
+    }
+    .footer__icon ul {
+        padding-right: 2.5rem;
+    }
+
 }
