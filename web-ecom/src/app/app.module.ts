@@ -8,7 +8,9 @@ import {appRoutes} from './routes'
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import {CarouselComponent} from './carousel/carousel.component'
-  import { from } from 'rxjs';
+import { from } from 'rxjs';
+import { ProductsComponent } from './products/products.component';
+import { ErrorComponent } from './error/error.component';
 import { HomeComponent } from './home/home.component';
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { HomeComponent } from './home/home.component';
     LoginComponent,
     RegistrationComponent,
     FooterComponent,
+    ProductsComponent,
+    ErrorComponent
     HomeComponent
   ],
   imports: [
