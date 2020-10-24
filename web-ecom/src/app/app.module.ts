@@ -9,6 +9,8 @@ import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import {CarouselComponent} from './carousel/carousel.component'
   import { from } from 'rxjs';
+import { ProductsComponent } from './products/products.component';
+import { ErrorComponent } from './error/error.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,9 @@ import {CarouselComponent} from './carousel/carousel.component'
     NavbarComponent,
     LoginComponent,
     RegistrationComponent,
-    FooterComponent
+    FooterComponent,
+    ProductsComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
