@@ -10,8 +10,10 @@ import { FooterComponent } from './footer/footer.component';
 import {CarouselComponent} from './carousel/carousel.component'
 import { from } from 'rxjs';
 import { ProductsComponent } from './products/products.component';
+import {ProductService} from "./products/shared/product.service"
+import { ProductsListComponent} from "./products/list/product.list"
 import { ErrorComponent } from './error/error.component';
-import { HomeComponent } from './home/home.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,14 +23,15 @@ import { HomeComponent } from './home/home.component';
     RegistrationComponent,
     FooterComponent,
     ProductsComponent,
+    ProductsListComponent,
     ErrorComponent
-    HomeComponent
+   
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
