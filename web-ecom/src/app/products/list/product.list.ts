@@ -16,7 +16,7 @@ import { Component, OnInit, Input } from '@angular/core';
                         <span>{{data.price}}</span>
                     </div>
                 </div>
-            <div>
+            <div> 
         </div>
     </div>
 
