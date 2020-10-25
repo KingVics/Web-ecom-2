@@ -18,7 +18,7 @@
 
       <li class="nav-left" >
         <a *ngIf="!auth.isLoggedIn()" [routerLink]="['/login']" >SIGN IN </a>
-        <a  *ngIf="auth.isLoggedIn()" [routerLink]="['/']">Welcome, {{auth.currentUser.firstName}}</a>
+        <a  *ngIf="auth.isLoggedIn()" [routerLink]="['/']">Welcome, {{auth.currentUser.firstname}} </a>
       </li>
       <li  class="nav-left">
         <a *ngIf="!auth.isLoggedIn()" [routerLink]="['/signup']">REGISTER</a>

@@ -16,6 +16,7 @@ import { AuthService } from "./user/authService"
 import { HomeComponent } from './home/home.component';
 import { ProductService } from './products/shared/product.service';
 import { ProductsListComponent } from './products/list/product.list';
+import { HttpClientModule } from "@angular/common/http"
 
 @NgModule({
   declarations: [
@@ -27,12 +28,13 @@ import { ProductsListComponent } from './products/list/product.list';
     FooterComponent,
     ProductsComponent,
     ErrorComponent,
-ProductsListComponent,
+    ProductsListComponent,
     HomeComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [ProductService, AuthService],
