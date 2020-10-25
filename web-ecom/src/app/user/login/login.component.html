@@ -15,26 +15,35 @@
                         </div>     
                     </div>
                     <div class="">
-                        <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)" 
+                        <form #loginForm="ngForm" (ngSubmit)="loginUser()" 
                          autocomplete="off">
+                            <small class="text-danger">{{msg}}</small>
                             <div class="login_input_container">
                                 <input 
-                                    (ngModel)="email"
+                                    [(ngModel)]="user.email"
                                     name="email"
                                     placeholder="Email address" 
                                     type="email" 
-                                    id="email" 
+                                    required
+                                    pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+                                    #email="ngModel"
+                                    [class.is-invalid]="email.invalid && email.touched"
+                                    
                                 />
+                                <small class="text-danger" [class.d-none]="email.invalid || email.untouched">Please enter a valid email</small>
                             </div>
                             <div class="login_input_container">
                                 <input 
-                                    (ngModel)="password"
+                                    [(ngModel)]="user.password"
                                     name="password"
                                     placeholder="Password" 
                                     type="password" 
-                                    id="password"
                                     autocomplete="off"
+                                    #password="ngModel"
+                                    [class.is-invalid]="password.invalid && password.touched"
+                                    
                                 />
+                                <small class="text-danger" [class.d-none]="password.invalid || password.untouched">Please enter a valid password</small>
                             </div>
                             <div class="login_button">
                                 <button onclick="submit">Login</button>

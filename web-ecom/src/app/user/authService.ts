@@ -5,11 +5,14 @@ import {IUSER} from "./user.model"
 
 export class AuthService {
     currentUser:IUSER
-    login(email:string, password: string) {
+    login() {
         this.currentUser = {
-            id: 1,
-            firstName: 'Victor',
-            lastName: 'Papaya',
+            id: "1",
+            firstname: 'Victor',
+            lastname: 'Papaya',
+            password:"hhhhhhh",
+            email:"jjjjjjjj",
+            phone: 9999999999999,
 
         }
     }

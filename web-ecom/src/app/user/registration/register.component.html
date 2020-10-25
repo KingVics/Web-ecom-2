@@ -15,30 +15,55 @@
                         </div>     
                     </div>
                     <div class="">
-                        <form>
+                        <form #RegisterForm="ngForm" (ngSubmit)="registerUser()">
                             <div class="login_input_container">
                                 <input 
-                                    placeholder="Username" 
+                                    placeholder="First Name" 
+                                    name="firstname"
                                     type="text" 
-                                    id="username" 
+                                    [(ngModel)]="user.firstname"
+                                    required
+                                />
+                            </div>
+                            <div class="login_input_container">
+                                <input 
+                                    placeholder="Last Name" 
+                                    name="lastname"
+                                    type="text" 
+                                    [(ngModel)]="user.lastname"
+                                    required
+                                />
+                            </div>
+                            <div class="login_input_container">
+                                <input 
+                                    placeholder="Phone No" 
+                                    name="phone"
+                                    type="phone" 
+                                    id="phone" 
+                                    [(ngModel)]="user.phone"
+                                    
                                 />
                             </div>
                             <div class="login_input_container">
                                 <input 
                                     placeholder="Email address" 
+                                    name="email"
                                     type="email" 
-                                    id="email" 
+                                    [(ngModel)]="user.email"
+                                    required
                                 />
                             </div>
                             <div class="login_input_container">
                                 <input 
                                     placeholder="Password" 
+                                    name="password"
                                     type="password" 
-                                    id="password"
+                                    [(ngModel)]="user.password"
+                                    required
                                 />
                             </div>
                             <div class="login_button">
-                                <button onclick="submit">Register</button>
+                                <button [disabled]="RegisterForm.form.invalid" type="submit">Register</button>
                             </div>
                         </form>
                         <div class="register_checkbox">

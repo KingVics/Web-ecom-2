@@ -1,6 +1,9 @@
 import { Component } from '@angular/core'
-import { AuthService } from "../authService"
 import { Router } from "@angular/router"
+import {HttpClient} from "@angular/common/http"
+import {RegistrationService} from "../registration.service"
+import { IUSER } from '../user.model'
+import { AuthService } from "../authService"
 
 @Component ({
     selector: 'login-app',
@@ -11,11 +14,23 @@ import { Router } from "@angular/router"
 export class LoginComponent { 
     email
     password
+    user = new IUSER();
+    msg ="";
 
-    constructor(private authService:AuthService, private router:Router) {}
 
-    login(formValues) {
-        this.authService.login(formValues.email, formValues.password)
-        this.router.navigate(['products'])
+    constructor(private service:RegistrationService, private router:Router, private http:HttpClient, private auth:AuthService) {}
+
+    loginUser() {
+        this.auth.login()
+        this.service.loginUserfromRemote(this.user).subscribe(
+            data => {
+                console.log("response received");
+                this.router.navigate(['/products'])
+            },
+            error => {
+                console.log("expection occured");
+                this.msg="Please enter a valid credentials"
+            }
+        )
     }
 }
