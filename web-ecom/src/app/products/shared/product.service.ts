@@ -49,25 +49,25 @@ let PRODUCTS = [{
     price: 15000,
     starRating: 3.0,
     imageUrl: "../../../assets/products/2.png"
+  },
+  {
+    productId: 5,
+    productName: "Women trendy shoes",
+    productOrders: "",
+    productReviews: "",
+    description: "",
+    price: 15000,
+    starRating: 4.5,
+    imageUrl: "../../../assets/products/5.png"
+  },
+{
+    productId: 6,
+    productName: "Air pod pro",
+    productOrders: "",
+    productReviews: "",
+    description: "",
+    price: 15000,
+    starRating: 4.8,
+    imageUrl: "../../../assets/products/6.png"
   }
-//   {
-//     productId: 5,
-//     productName: "Women trendy shoes",
-//     productOrders: "",
-//     productReviews: "",
-//     description: "",
-//     price: 15000,
-//     starRating: 4.5,
-//     imageUrl: "./assets/product/5.png"
-//   },
-// {
-//     productId: 6,
-//     productName: "Air pod pro",
-//     productOrders: "",
-//     productReviews: "",
-//     description: "",
-//     price: 15000,
-//     starRating: 4.8,
-//     imageUrl: "./assets/product/6.png"
-//   }
 ]
