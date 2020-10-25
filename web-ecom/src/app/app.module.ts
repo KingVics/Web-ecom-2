@@ -11,10 +11,11 @@ import { FooterComponent } from './footer/footer.component';
 import {CarouselComponent} from './carousel/carousel.component'
 import { from } from 'rxjs';
 import { ProductsComponent } from './products/products.component';
-import {ProductService} from "./products/shared/product.service"
-import { ProductsListComponent} from "./products/list/product.list"
 import { ErrorComponent } from './error/error.component';
 import { AuthService } from "./user/authService"
+import { HomeComponent } from './home/home.component';
+import { ProductService } from './products/shared/product.service';
+import { ProductsListComponent } from './products/list/product.list';
 
 @NgModule({
   declarations: [
@@ -25,9 +26,9 @@ import { AuthService } from "./user/authService"
     RegistrationComponent,
     FooterComponent,
     ProductsComponent,
-    ProductsListComponent,
-    ErrorComponent
-   
+    ErrorComponent,
+ProductsListComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
