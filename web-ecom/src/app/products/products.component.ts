@@ -6,13 +6,16 @@ import {ProductService} from "./shared/product.service"
   template:  `<div>
   <app-carousel></app-carousel>
   <div class="container">
-      <div *ngFor="let product_entry of products">
-        <app-list [data]="product_entry"></app-list>
-      </div> 
-   
+  <div class="row">
+      <div class="col-sm-3 col-md-3" *ngFor="let product_entry of products">
+      <app-list [data]="product_entry"></app-list>
+      </div>
+      </div>
+
+
   </div>
-      
-    
+
+
   <div>`,
   styleUrls: ['./products.component.css']
 })
