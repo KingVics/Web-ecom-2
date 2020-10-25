@@ -15,19 +15,25 @@
                         </div>     
                     </div>
                     <div class="">
-                        <form>
+                        <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)" 
+                         autocomplete="off">
                             <div class="login_input_container">
                                 <input 
-                                    placeholder="Username or email" 
-                                    type="text" 
-                                    id="username" 
+                                    (ngModel)="email"
+                                    name="email"
+                                    placeholder="Email address" 
+                                    type="email" 
+                                    id="email" 
                                 />
                             </div>
                             <div class="login_input_container">
                                 <input 
+                                    (ngModel)="password"
+                                    name="password"
                                     placeholder="Password" 
                                     type="password" 
                                     id="password"
+                                    autocomplete="off"
                                 />
                             </div>
                             <div class="login_button">

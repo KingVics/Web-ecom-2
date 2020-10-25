@@ -17,13 +17,13 @@
     <ul class="display-inline">
 
       <li class="nav-left" >
-        <a [routerLink]="['/login']" >SIGN IN </a>
+        <a *ngIf="!auth.isLoggedIn()" [routerLink]="['/login']" >SIGN IN </a>
+        <a  *ngIf="auth.isLoggedIn()" [routerLink]="['/']">Welcome, {{auth.currentUser.firstName}}</a>
       </li>
       <li  class="nav-left">
-        <a [routerLink]="['/signup']">REGISTER</a>
+        <a *ngIf="!auth.isLoggedIn()" [routerLink]="['/signup']">REGISTER</a>
       </li>
       <li >
-
         <a  href="#"><img class="sm" src="assets/icons/icon.png" alt="" srcset=""></a>
       </li>
 
