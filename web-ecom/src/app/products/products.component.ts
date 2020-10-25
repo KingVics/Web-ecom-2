@@ -5,17 +5,13 @@ import {ProductService} from "./shared/product.service"
   selector: 'app-products',
   template:  `<div>
   <app-carousel></app-carousel>
-  <div class="container">
-  <div class="row">
-      <div class="col-sm-3 col-md-3" *ngFor="let product_entry of products">
-      <app-list [data]="product_entry"></app-list>
+    <div class="container-fluid product_container">
+      <div class="row">
+        <div class="col-sm-2 col-md-2" *ngFor="let product_entry of products">
+          <app-list [data]="product_entry"></app-list>
+        </div>
       </div>
-      </div>
-
-
-  </div>
-
-
+    </div>
   <div>`,
   styleUrls: ['./products.component.css']
 })
