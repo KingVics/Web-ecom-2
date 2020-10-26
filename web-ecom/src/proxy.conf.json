@@ -1,0 +1,7 @@
+// {
+//     "/api/*": {
+//         "target": "https://sopaua.herokuapp.com/api/v1/",
+//         "secure": false,
+//         "logLevel": "debug"
+//     }
+// }

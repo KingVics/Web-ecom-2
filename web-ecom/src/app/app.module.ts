@@ -13,7 +13,8 @@ import { ErrorComponent } from './error/error.component';
 import { HomeComponent } from './home/home.component';
 import { ProductService } from './products/shared/product.service';
 import { ProductsListComponent } from './products/list/product.list';
-import { AuthService } from './user/auth.service';
+import { HttpClientModule } from "@angular/common/http"
+import { AuthService } from "./user/authService"
 
 @NgModule({
   declarations: [
@@ -24,12 +25,13 @@ import { AuthService } from './user/auth.service';
     FooterComponent,
     ProductsComponent,
     ErrorComponent,
-ProductsListComponent,
+    ProductsListComponent,
     HomeComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [ProductService, AuthService],

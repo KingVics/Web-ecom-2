@@ -10,8 +10,52 @@
                     <div class="login_header__login">
                         <a routerLink="/user/login">LogIn</a>
                     </div>
-                    <div class="login_header__register">
-                        <a routerLink="/user/register">Register</a>
+                    <div class="login_header_container">
+                        <div class="login_header__login">
+                            <a [routerLink]="['/login']">LogIn</a>
+                        </div>
+                        <div class="login_header__register">
+                            <a [routerLink]="['/signup']">Register</a>
+                        </div>     
+                    </div>
+                    <div class="">
+                        <form #loginForm="ngForm" (ngSubmit)="loginUser()" 
+                         autocomplete="off">
+                            <small class="text-danger">{{msg}}</small>
+                            <div class="login_input_container">
+                                <input 
+                                    [(ngModel)]="user.email"
+                                    name="email"
+                                    placeholder="Email address" 
+                                    type="email" 
+                                    required
+                                    pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+                                    #email="ngModel"
+                                    [class.is-invalid]="email.invalid && email.touched"
+                                    
+                                />
+                                <small class="text-danger" [class.d-none]="email.invalid || email.untouched">Please enter a valid email</small>
+                            </div>
+                            <div class="login_input_container">
+                                <input 
+                                    [(ngModel)]="user.password"
+                                    name="password"
+                                    placeholder="Password" 
+                                    type="password" 
+                                    autocomplete="off"
+                                    #password="ngModel"
+                                    [class.is-invalid]="password.invalid && password.touched"
+                                    
+                                />
+                                <small class="text-danger" [class.d-none]="password.invalid || password.untouched">Please enter a valid password</small>
+                            </div>
+                            <div class="login_button">
+                                <button onclick="submit">Login</button>
+                            </div>
+                        </form>
+                        <div class="login_forgot-password">
+                            <a href="">Forgot Password?</a>
+                        </div>
                     </div>
                 </div>
                   <div class="">

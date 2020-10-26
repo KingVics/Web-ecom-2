@@ -75,13 +75,15 @@ em{
 
 .login_input_container input[type="text"],
 .login_input_container input[type="password"],
-.login_input_container input[type="email"] {
-    padding-left: 20px;
+.login_input_container input[type="email"],
+.login_input_container input[type="phone"] {
+    padding-left: 20px;    
 }
 
 .login_input_container input[type="text"]:focus,
 .login_input_container input[type="password"]:focus,
-.login_input_container input[type="email"]:focus {
+.login_input_container input[type="email"]:focus,
+.login_input_container input[type="phone"] {
     border-color: #EB5926;
     box-shadow: 0 0 8px 0 #EB5926;
     outline: none;

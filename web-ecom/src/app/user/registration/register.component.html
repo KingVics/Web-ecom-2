@@ -1,0 +1,81 @@
+<section [routerLink]="['/signup']" class="register_section">
+    <div class="container-sm">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="login_card">
+                    <div class="login_logo_container">
+                        <img src="../../assets/logo/logo.png"  alt="sellIt_logo"/>
+                    </div>
+                    <div class="login_header_container">
+                        <div class="login_header__login">
+                            <a [routerLink]="['/signup']">Register</a>
+                        </div>
+                        <div class="login_header__register">
+                            <a [routerLink]="['/login']">LogIn</a>
+                        </div>     
+                    </div>
+                    <div class="">
+                        <form #RegisterForm="ngForm" (ngSubmit)="registerUser()">
+                            <div class="login_input_container">
+                                <input 
+                                    placeholder="First Name" 
+                                    name="firstname"
+                                    type="text" 
+                                    [(ngModel)]="user.firstname"
+                                    required
+                                />
+                            </div>
+                            <div class="login_input_container">
+                                <input 
+                                    placeholder="Last Name" 
+                                    name="lastname"
+                                    type="text" 
+                                    [(ngModel)]="user.lastname"
+                                    required
+                                />
+                            </div>
+                            <div class="login_input_container">
+                                <input 
+                                    placeholder="Phone No" 
+                                    name="phone"
+                                    type="phone" 
+                                    id="phone" 
+                                    [(ngModel)]="user.phone"
+                                    
+                                />
+                            </div>
+                            <div class="login_input_container">
+                                <input 
+                                    placeholder="Email address" 
+                                    name="email"
+                                    type="email" 
+                                    [(ngModel)]="user.email"
+                                    required
+                                />
+                            </div>
+                            <div class="login_input_container">
+                                <input 
+                                    placeholder="Password" 
+                                    name="password"
+                                    type="password" 
+                                    [(ngModel)]="user.password"
+                                    required
+                                />
+                            </div>
+                            <div class="login_button">
+                                <button [disabled]="RegisterForm.form.invalid" type="submit">Register</button>
+                            </div>
+                        </form>
+                        <div class="register_checkbox">
+                            <input 
+                                type="checkbox" 
+                                id="checkbox" 
+                            />
+                            <p>I agree to the terms and conditions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
