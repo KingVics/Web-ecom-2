@@ -17,13 +17,12 @@
     border-radius: 0px 0px 7px 7px;  
     box-shadow: 1px 1px 2px 1px rgba(0,0,0,.4); 
     width: 100%;
-    height: 100%;
+    height: fit-content;
 }
 
 .product__name,
 .product__price {
-    margin-left: 1rem;
-    
+    margin-left: 1rem;  
 }
 
 .product__name {

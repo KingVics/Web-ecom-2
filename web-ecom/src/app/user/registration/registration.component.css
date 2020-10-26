@@ -25,7 +25,11 @@
   margin-left: 10px;
 }
 
-@media (max-width: 468px) {
+@media (max-width: 540px) {
+  .register_card {
+    width: 80%;
+    margin: 0 auto;
+}
   .register_checkbox  {
      padding-top: 0.5rem;
      text-align: center;
