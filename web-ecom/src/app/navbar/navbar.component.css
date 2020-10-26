@@ -57,7 +57,7 @@
 
 .nav-left{
   margin: 1.2em 1em 0 1em;
-  height: 27px; 
+  height: 27px;
   opacity: 1;
 }
 
@@ -89,6 +89,7 @@
    display: none;
   }
 }
+
 
 .form-inline-lg .form-control-lg {
   display: inline-block;
