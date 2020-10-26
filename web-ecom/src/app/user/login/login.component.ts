@@ -1,21 +1,23 @@
-import { Component } from '@angular/core'
-import { AuthService } from "../authService"
-import { Router } from "@angular/router"
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 
-@Component ({
-    selector: 'login-app',
-    templateUrl: './login.component.html',
-    styleUrls: ["./login.component.css"]
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
+export class LoginComponent implements OnInit {
+email
+password
+mouseoverLogin
+  constructor(private auth:AuthService,private router:Router) { }
 
-export class LoginComponent { 
-    email
-    password
+  ngOnInit(): void {
+  }
+  login(formValues){
+    this.auth.login(formValues.email,formValues.password)
+    this.router.navigate(['/products'])
+  }
 
-    constructor(private authService:AuthService, private router:Router) {}
-
-    login(formValues) {
-        this.authService.login(formValues.email, formValues.password)
-        this.router.navigate(['products'])
-    }
 }
