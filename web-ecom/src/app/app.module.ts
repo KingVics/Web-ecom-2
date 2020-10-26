@@ -14,19 +14,20 @@ import { HomeComponent } from './home/home.component';
 import { ProductService } from './products/shared/product.service';
 import { ProductsListComponent } from './products/list/product.list';
 import { HttpClientModule } from "@angular/common/http"
-import { AuthService } from "./user/authService"
+import { AuthService } from "./user/auth.service"
+
 
 @NgModule({
   declarations: [
     AppComponent,
     CarouselComponent,
     NavbarComponent,
-
     FooterComponent,
     ProductsComponent,
     ErrorComponent,
     ProductsListComponent,
     HomeComponent,
+   
   ],
   imports: [
     BrowserModule,

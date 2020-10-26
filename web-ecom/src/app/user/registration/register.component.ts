@@ -3,13 +3,13 @@ import { HttpClient } from "@angular/common/http"
 import { NgForm } from "@angular/forms"
 import {RegistrationService} from "../registration.service"
 import { IUSER } from '../user.model'
-import { AuthService } from "../authService"
+import { AuthService } from "../auth.service"
 import { Router } from "@angular/router"
 
 @Component({
     selector: "register-app",
     templateUrl: './register.component.html',
-    styleUrls: ['../login/login.component.css', './register.component.css']
+    styleUrls: ['../login/login.component.css', './registration.component.css']
 })
 
 export class RegistrationComponent {
@@ -22,7 +22,7 @@ export class RegistrationComponent {
           data => {
             console.log("response received");
             this.msg ="Registration successfull"
-            this.router.navigate(['/login'])
+            this.router.navigate(['user/login'])
         },
         error => {
           console.log("expection occured");

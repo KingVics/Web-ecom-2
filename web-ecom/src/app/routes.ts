@@ -7,7 +7,6 @@ import { ErrorComponent } from './error/error.component'
 export const appRoutes:Routes = [
     {path:'products',component:ProductsComponent},
     {path:'user',loadChildren:()=> import('./user/user.module').then(m=>m.UserModule)},
-
     {path:'',redirectTo:'/products',pathMatch:'full'},
     {path:'**',component:ErrorComponent}
 

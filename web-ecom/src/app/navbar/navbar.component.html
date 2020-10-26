@@ -17,14 +17,8 @@
     <ul class="display-inline">
 
       <li class="nav-left" >
-<<<<<<< HEAD
         <a *ngIf="!auth.isLoggedIn()" [routerLink]="['user/login']" >SIGN IN </a>
-        <a  *ngIf="auth.isLoggedIn()" [routerLink]="['/']">Welcome, {{auth.currentUser.firstName}}</a>
-
-=======
-        <a *ngIf="!auth.isLoggedIn()" [routerLink]="['/login']" >SIGN IN </a>
         <a  *ngIf="auth.isLoggedIn()" [routerLink]="['/']">Welcome, {{auth.currentUser.firstname}} </a>
->>>>>>> c368dcadcab0dcc1b8c1ee3a68fde0f831b3d5d0
       </li>
       <li  class="nav-left">
         <a *ngIf="!auth.isLoggedIn()" [routerLink]="['user/register']">REGISTER</a>

@@ -1,20 +1,24 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { Useri } from './useri';
+import { IUSER } from './user.model';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-currentUser:Useri
+currentUser:IUSER
 
- currentUserSubject: BehaviorSubject<Useri>
+ currentUserSubject: BehaviorSubject<IUSER>
   constructor() { }
-  login(email:string, password: string) {
+  login() {
     this.currentUser = {
-        id: 1,
-        firstName: 'Victor',
-        lastName: 'Papaya',
+      id: "1",
+      firstname: 'Victor',
+      lastname: 'Papaya',
+      password:"hhhhhhh",
+      email:"jjjjjjjj",
+      phone: 9999999999999,
 
     }
 }
