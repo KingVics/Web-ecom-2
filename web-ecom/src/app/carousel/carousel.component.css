@@ -1,0 +1,75 @@
+.shop div{
+  text-transform: uppercase;
+  font:normal normal bold 20px/27px Segoe UI;
+letter-spacing: 0px;
+color: #FFFFFF;
+opacity: 1;
+text-align: center;
+
+height: 27px;
+}
+.shop{
+  position: absolute;
+  left: 20px;
+  bottom: 6px;
+  width: 200px;
+height: 52px;
+background: #EB5926 0% 0% no-repeat padding-box;
+border: 1px solid #707070;
+border-radius: 50px;
+opacity: 1;
+}
+@media screen and (max-width:1168px){
+  .shop{
+    position: absolute;
+    left: 20px;
+    bottom: 3px;
+    width: 180px;
+  height: 50px;
+
+  }
+
+}
+@media screen and (max-width:1056px){
+  .shop{
+    position: absolute;
+    left: 20px;
+    bottom: 3px;
+    width: 145px;
+  height: 40px;
+
+  }
+
+}
+
+@media screen and (max-width:928px){
+  .shop{
+    position: absolute;
+    left: 20px;
+    bottom: -10px;
+    width: 130px;
+  height: 35px;
+
+  }
+  .shop div{
+    text-transform: uppercase;
+    font:normal normal bold 18px Segoe UI;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
+  text-align: center;
+
+  height: 22px;
+  }
+
+}
+
+@media screen and (max-width:697px){
+  .shop{
+  display: none;
+
+  }
+
+
+}
+
