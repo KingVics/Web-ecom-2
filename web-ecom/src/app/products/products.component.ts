@@ -73,7 +73,9 @@ import {ProductService} from "./shared/product.service"
   </div>
     </div>
 
-    
+    <app-top></app-top>
+
+
   <div>`,
   styleUrls: ['./products.component.css']
 })

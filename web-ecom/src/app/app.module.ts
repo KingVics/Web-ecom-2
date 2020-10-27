@@ -14,7 +14,8 @@ import { HomeComponent } from './home/home.component';
 import { ProductService } from './products/shared/product.service';
 import { ProductsListComponent } from './products/list/product.list';
 import { HttpClientModule } from "@angular/common/http"
-import { AuthService } from "./user/auth.service"
+import { AuthService } from "./user/auth.service";
+import { TopComponent } from './products/top/top.component'
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { AuthService } from "./user/auth.service"
     ErrorComponent,
     ProductsListComponent,
     HomeComponent,
+    TopComponent,
    
   ],
   imports: [
