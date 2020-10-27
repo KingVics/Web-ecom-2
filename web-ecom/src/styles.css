@@ -1,11 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
 body {
-    background-color: #fff;
     font-size: 14px;
     font-family: 'Noto Serif', serif;
     font-family: 'Open Sans', sans-serif;
     font-family: 'Oxygen', sans-serif;
+    background: #F2F2F2 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    opacity: 1;
 }
 
 * {

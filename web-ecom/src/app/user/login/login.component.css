@@ -101,6 +101,7 @@
     border: none;
     box-shadow: 0px 0px 3px 1px rgb(167, 158, 158);
     cursor: pointer;
+    outline: 0;
 }
 
 .login_forgot-password {

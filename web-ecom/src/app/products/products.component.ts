@@ -64,7 +64,7 @@ import {ProductService} from "./shared/product.service"
         </div>
       </div>
     </div>
-    <div class="product__banner_advert product_container">
+    <div class="product__banner_advert product_banner_container">
     <div class="row">
     <div class="col-sm-12 col-md-12">
       <img src="../../assets/banners/amelia.png" />
