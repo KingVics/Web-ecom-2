@@ -1,6 +1,8 @@
 .product_container {
     margin-top: 2rem;
     margin-bottom: 2rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
     overflow: hidden;
 }
 .product__banner {
@@ -40,6 +42,8 @@
 .product__banner_advert {
     overflow: hidden;
     width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 .product__banner_advert img {
     width: 100%;
