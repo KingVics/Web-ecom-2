@@ -1,0 +1,20 @@
+.recommend_collection {
+  background: #FEFEFE 0% 0% no-repeat padding-box;
+  border: 1px solid #707070; 
+  border-radius: 15px;
+  opacity: .95;
+  margin: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 1rem; 
+  overflow: hidden;
+  width: fit-content;
+}
+.recommend_product {
+    margin: 0.5rem 0;
+}
+
+.product__banner_advert img {
+    margin-top: 1.5rem;
+    margin-top: 1.5rem;
+    width: 100%;
+}

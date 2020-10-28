@@ -15,7 +15,8 @@ import { ProductService } from './products/shared/product.service';
 import { ProductsListComponent } from './products/list/product.list';
 import { HttpClientModule } from "@angular/common/http"
 import { AuthService } from "./user/auth.service";
-import { TopComponent } from './products/top/top.component'
+import { TopComponent } from './products/top/top.component';
+import { RecommendedComponent } from './products/recommend/recommend.component'
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { TopComponent } from './products/top/top.component'
     ProductsListComponent,
     HomeComponent,
     TopComponent,
+    RecommendedComponent,
    
   ],
   imports: [

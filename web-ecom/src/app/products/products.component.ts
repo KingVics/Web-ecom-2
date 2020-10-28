@@ -71,9 +71,9 @@ import {ProductService} from "./shared/product.service"
       <h2 class="product__banner_advert_content">All you need in one place!</h2>
     </div>
   </div>
-    </div>
-
+  </div>
     <app-top></app-top>
+    <app-recommend></app-recommend>
 
 
   <div>`,
