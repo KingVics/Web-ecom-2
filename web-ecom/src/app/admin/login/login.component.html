@@ -13,15 +13,16 @@
 
                   </div>
                   <div class="">
-                      <form
-                       autocomplete="off">
+                      <form  #adminForm="ngForm" (ngSubmit)="adminUser()" autocomplete="off">
                           <div class="login_input_container">
                               <!-- <em *ngIf="loginForm.controls.email?.invalid && (loginForm.controls.email?.touched || mouseoverLogin)">Required</em> -->
                               <input
                                   name="email"
+                                  [(ngModel)]="user.email"
                                   placeholder="Email address"
                                   type="email"
                                   required
+                                  #email="ngModel"
                                   pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
 
 
@@ -31,8 +32,10 @@
                               <!-- <em *ngIf="loginForm.controls.password?.invalid && (loginForm.controls.password?.touched  || mouseoverLogin)">Required</em> -->
                               <input
                                   name="password"
+                                  [(ngModel)]="user.password"
                                   placeholder="Password"
                                   type="password"
+                                  #password="ngModel"
                                   autocomplete="off"
 
                               />
