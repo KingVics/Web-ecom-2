@@ -22,6 +22,7 @@
     "bootstrap": "^4.5.3",
     "jquery": "^3.5.1",
     "ngf-bootstrap": "0.0.5",
+    "popper.js": "^1.14.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
