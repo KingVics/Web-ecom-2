@@ -1,0 +1,53 @@
+<section  class="login_section">
+  <div class="container-sm">
+      <div class="row">
+          <div class="col-md-12 col-sm-12">
+              <div class="login_card">
+                  <div class="login_logo_container">
+                      <img src="../../assets/logo/logo.png"  alt="sellIt_logo"/>
+                  </div>
+                  <div class="login_header_container">
+                      <div class="login_header__login">
+                          <a>Admin LogIn</a>
+                      </div>
+
+                  </div>
+                  <div class="">
+                      <form
+                       autocomplete="off">
+                          <div class="login_input_container">
+                              <!-- <em *ngIf="loginForm.controls.email?.invalid && (loginForm.controls.email?.touched || mouseoverLogin)">Required</em> -->
+                              <input
+                                  name="email"
+                                  placeholder="Email address"
+                                  type="email"
+                                  required
+                                  pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+
+
+                              />
+                                       </div>
+                          <div class="login_input_container">
+                              <!-- <em *ngIf="loginForm.controls.password?.invalid && (loginForm.controls.password?.touched  || mouseoverLogin)">Required</em> -->
+                              <input
+                                  name="password"
+                                  placeholder="Password"
+                                  type="password"
+                                  autocomplete="off"
+
+                              />
+                          </div>
+                          <div class="login_button">
+                              <!-- <span (mouseenter)="mouseoverLogin=true" (mouseleave)="mouseoverLogin=false"> -->
+                              <button >Login</button>
+                          </div>
+                      </form>
+                      <div class="login_forgot-password">
+                          <a href="">Forgot Password?</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>

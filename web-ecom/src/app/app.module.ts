@@ -20,10 +20,6 @@ import { RecommendedComponent } from './products/recommend/recommend.component';
 import { ProductDetailsComponent } from './products/product-details/product-details.component'
 import {ProductRouterActivate} from "./products/product-details/product-router.activate.service"
 
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,9 +33,6 @@ import {ProductRouterActivate} from "./products/product-details/product-router.a
     TopComponent,
     RecommendedComponent,
     ProductDetailsComponent,
-
- 
-   
   ],
   imports: [
     BrowserModule,
