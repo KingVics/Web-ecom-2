@@ -1,0 +1,30 @@
+<section class="product__details">
+    <div  class="container ">
+        <div class="row">
+            <div class="col-sm-5 col-md-5">
+                <div class="image__container">
+                    <img [src]="product?.imageUrl" [alt]="product?.productName" />
+
+                </div>
+            </div>
+            <div class="col-sm-7 col-md-7 product_detail">
+                <div class="product_details_content">
+                    <div class="product__details_name"><h3>{{product?.productName}}</h3></div>
+                    <div class="product__details_desc"><h3>{{product?.description}}</h3></div>
+                    <div class="product__details_group_items">
+                        <span>{{product?.productOrders}}</span>
+                        <span>{{product?.productReviews}}</span>
+                        <span>{{product?.starRating}}</span>
+                    </div>
+                    <div class="product__details_price"><h3>₦{{product?.price}}</h3></div>
+                    <div class="product__details_color"><h3>Color:</h3></div>
+                    <div class="product__details_quantity"><h3>Quanity</h3></div>
+                    <div class="product__details_button">
+                        <button>Buy Now</button>
+                        <button class="product__details_button_buy">Add to Cart</button> 
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+</section>

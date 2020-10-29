@@ -16,7 +16,11 @@ import { ProductsListComponent } from './products/list/product.list';
 import { HttpClientModule } from "@angular/common/http"
 import { AuthService } from "./user/auth.service";
 import { TopComponent } from './products/top/top.component';
-import { RecommendedComponent } from './products/recommend/recommend.component'
+import { RecommendedComponent } from './products/recommend/recommend.component';
+import { ProductDetailsComponent } from './products/product-details/product-details.component'
+import {ProductRouterActivate} from "./products/product-details/product-router.activate.service"
+
+
 
 
 @NgModule({
@@ -31,15 +35,23 @@ import { RecommendedComponent } from './products/recommend/recommend.component'
     HomeComponent,
     TopComponent,
     RecommendedComponent,
+    ProductDetailsComponent,
+   
+ 
    
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    RouterModule
   ],
-  providers: [ProductService, AuthService],
+  providers: [
+    ProductService, 
+    AuthService,
+    ProductRouterActivate],
+   
   bootstrap: [AppComponent]
 })
 export class AppModule { }

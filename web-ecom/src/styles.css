@@ -5,9 +5,10 @@ body {
     font-family: 'Noto Serif', serif;
     font-family: 'Open Sans', sans-serif;
     font-family: 'Oxygen', sans-serif;
-    background: #F2F2F2 0% 0% no-repeat padding-box;
+    /* background: #F2F2F2 0% 0% no-repeat padding-box; */
     border: 1px solid #707070;
     opacity: 1;
+    outline: 0;
 }
 
 * {

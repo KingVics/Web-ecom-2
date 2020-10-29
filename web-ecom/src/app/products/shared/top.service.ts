@@ -9,6 +9,10 @@ export class TopService {
   getTopCollections(){
     return TOPCOLLECTIONS
   }
+
+  getTop(id:number) {
+    return TOPCOLLECTIONS.find(top => top.productId === id)
+  }
 }
 
 
@@ -63,7 +67,7 @@ let TOPCOLLECTIONS = [{
   imageUrl: "../../../assets/topCollections/12.png"
 },
 {
-  productId: 13,
+ productId: 13,
   productName: "Air pod pro",
   productOrders: "",
   productReviews: "",

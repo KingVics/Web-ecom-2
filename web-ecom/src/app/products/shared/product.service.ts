@@ -8,10 +8,14 @@ export class ProductService {
         return PRODUCTS
     }
 
+    getProducts(id:number) {
+      return PRODUCTS.find(product_entry => product_entry.id === id)
+    }
+
 }
 
 let PRODUCTS = [{
-    productId: 1,
+    id: 1,
     productName: "2020 Air Sneakers",
     productOrders: "",
     productReviews: "",
@@ -21,7 +25,7 @@ let PRODUCTS = [{
     imageUrl: "../../../assets/products/1.png"
   }, 
   {
-    productId: 3,
+    id: 3,
     productName: "BeatsbyDre Headphone",
     productOrders: "",
     productReviews: "",
@@ -31,17 +35,17 @@ let PRODUCTS = [{
     imageUrl: "../../../assets/products/3.png"
   },
  {
-    productId: 4,
-    productName: "Samsung Note 20s",
-    productOrders: "",
-    productReviews: "",
-    description: "",
+    id: 4,
+    productName: "SAMSUNG Galaxy Note S4 Pro",
+    productOrders: "14523 Orders |  ",
+    productReviews: "524 Reviews |",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
     price: 108000,
     starRating: 4.7,
     imageUrl: "../../../assets/products/4.png"
   },
  {
-    productId: 2,
+    id: 2,
     productName: "Luxury wrist watch",
     productOrders: "",
     productReviews: "",
@@ -51,7 +55,7 @@ let PRODUCTS = [{
     imageUrl: "../../../assets/products/2.png"
   },
   {
-    productId: 5,
+    id: 5,
     productName: "Women trendy shoes",
     productOrders: "",
     productReviews: "",
@@ -61,7 +65,7 @@ let PRODUCTS = [{
     imageUrl: "../../../assets/products/5.png"
   },
 {
-    productId: 6,
+    id: 6,
     productName: "Air pod pro",
     productOrders: "",
     productReviews: "",
@@ -69,5 +73,6 @@ let PRODUCTS = [{
     price: 15000,
     starRating: 4.8,
     imageUrl: "../../../assets/products/6.png"
-  }
+  },
+  
 ]
