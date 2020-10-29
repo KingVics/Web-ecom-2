@@ -84,6 +84,12 @@
 .bg{
   background-color: white;
 }
+
+.dropdown .show.dropdown-menu {
+  position: fixed !important;
+  top: 28px !important;
+  left: 80rem !important;
+}    
 @media screen and (max-width:823px){
   .input-group{
    display: none;
