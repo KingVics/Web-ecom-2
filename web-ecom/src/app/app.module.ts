@@ -10,7 +10,6 @@ import {CarouselComponent} from './carousel/carousel.component'
 import { from } from 'rxjs';
 import { ProductsComponent } from './products/products.component';
 import { ErrorComponent } from './error/error.component';
-import { HomeComponent } from './home/home.component';
 import { ProductService } from './products/shared/product.service';
 import { ProductsListComponent } from './products/list/product.list';
 import { HttpClientModule } from "@angular/common/http"
@@ -29,7 +28,6 @@ import {ProductRouterActivate} from "./products/product-details/product-router.a
     ProductsComponent,
     ErrorComponent,
     ProductsListComponent,
-    HomeComponent,
     TopComponent,
     RecommendedComponent,
     ProductDetailsComponent,
