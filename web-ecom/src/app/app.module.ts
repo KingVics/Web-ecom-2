@@ -16,8 +16,7 @@ import { ProductsListComponent } from './products/list/product.list';
 import { HttpClientModule } from "@angular/common/http"
 import { AuthService } from "./user/auth.service";
 import { TopComponent } from './products/top/top.component';
-import { RecommendedComponent } from './products/recommend/recommend.component'
-
+import { RecommendedComponent } from './products/recommend/recommend.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +30,8 @@ import { RecommendedComponent } from './products/recommend/recommend.component'
     HomeComponent,
     TopComponent,
     RecommendedComponent,
-   
+
+
   ],
   imports: [
     BrowserModule,

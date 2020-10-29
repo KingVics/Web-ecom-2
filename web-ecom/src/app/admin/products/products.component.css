@@ -1,0 +1,147 @@
+
+.product_header{
+  width: 125px;
+height: 40px;
+font: normal normal bold 30px/40px Segoe UI;
+letter-spacing: 0px;
+color: #101010;
+opacity: 1;
+}
+.table td, .table th {
+  padding: .75rem 0.2rem .75rem .75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+
+}
+.table-striped tbody tr:nth-of-type(odd) {
+  background: #E1E1E1 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+
+.btn-primary{
+  width: 212px;
+  height: 50px;
+  background: #EB5926 0% 0% no-repeat padding-box;
+  border-radius: 15px;
+  opacity: 1;
+  margin-top: .7em;
+}
+.text-right {
+  text-align: right!important;
+
+
+}
+
+tbody{
+  font: normal normal 600 21px/28px Segoe UI;
+letter-spacing: 0px;
+color: #101010;
+opacity: 1;
+}
+.TH-col{
+  background: #101010 0% 0% no-repeat padding-box;
+opacity: 1;
+font: normal normal normal 21px/28px Segoe UI;
+letter-spacing: 0px;
+color: #FFFFFF;
+opacity: 1;
+
+}
+.margin-top{
+margin: 1em 0 1em 0;
+}
+:-ms-input-placeholder{
+  text-align: center;
+}
+::-webkit-input-placeholder{
+  text-align: center;
+}
+.py-1{
+  width: 247px;
+  height: 31px;
+  background: #ECECEC 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+  opacity: 1;
+}
+.bg{background: #F2F2F2 0% 0% no-repeat padding-box;
+  height: 72px;
+opacity: 1;
+}
+.container-fluid{
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+@media screen and (max-width:660px){
+  tbody{
+    font: normal normal 600 15px Segoe UI;
+  letter-spacing: 0px;
+  color: #101010;
+  opacity: 1;
+  }
+  .TH-col{
+    background: #101010 0% 0% no-repeat padding-box;
+  opacity: 1;
+  font: normal normal normal 15px Segoe UI;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
+
+  }
+
+.product_header{
+  width: 125px;
+height: 40px;
+font: normal normal bold 30px Segoe UI;
+letter-spacing: 0px;
+color: #101010;
+opacity: 1;
+}
+
+.btn-primary{
+  width: 150px;
+  height: 35px;
+  background: #EB5926 0% 0% no-repeat padding-box;
+  border-radius: 15px;
+  opacity: 1;
+  margin-top: 1em;
+}
+}
+@media screen and (max-width:532px){
+  tbody{
+    font: normal normal 600 10px Segoe UI;
+  letter-spacing: 0px;
+  color: #101010;
+  opacity: 1;
+  }
+  .TH-col{
+    background: #101010 0% 0% no-repeat padding-box;
+  opacity: 1;
+  font: normal normal normal 10px Segoe UI;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
+
+  }
+}
+
+@media screen and (max-width:340px){
+  tbody{
+    font: normal normal 600 8px Segoe UI;
+  letter-spacing: 0px;
+  color: #101010;
+  opacity: 1;
+  }
+  .TH-col{
+    background: #101010 0% 0% no-repeat padding-box;
+  opacity: 1;
+  font: normal normal normal 8px Segoe UI;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
+
+  }
+}
+
+
+
+
+
