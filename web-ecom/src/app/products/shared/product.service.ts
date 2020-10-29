@@ -75,4 +75,5 @@ let PRODUCTS = [{
     imageUrl: "../../../assets/products/6.png"
   },
   
+  
 ]

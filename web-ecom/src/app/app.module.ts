@@ -23,6 +23,7 @@ import {ProductRouterActivate} from "./products/product-details/product-router.a
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,7 @@ import {ProductRouterActivate} from "./products/product-details/product-router.a
     TopComponent,
     RecommendedComponent,
     ProductDetailsComponent,
-   
+
  
    
   ],
