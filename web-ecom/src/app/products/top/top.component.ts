@@ -1,17 +1,41 @@
-import { Component, OnInit } from '@angular/core';
-import { TopService } from '../shared/top.service';
+import { Component, OnInit, Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-top',
-  templateUrl: './top.component.html',
-  styleUrls: ['./top.component.css']
+  template:  `
+
+    <div>
+        <div>
+          
+            <div class="product__list_card">
+            <div><img src="{{top.imageUrl}}" alt="" srcset=""></div>
+               <div class="product_details">
+                    <div class="product_name">
+                     <span>{{top.productName}}</span>
+                    </div>
+                <div class="product_price">
+                     <span>{{top.price}}</span>
+              </div>
+             </div>
+            <div> 
+        </div>
+    </div>
+
+
+
+  `,
+  styleUrls: ['./top.component.css', '../list/product.list.css']
+
 })
 export class TopComponent implements OnInit {
-topCollection:any[]
-  constructor(private topService:TopService) { }
+
+  @Input() top:any;
+  constructor() { }
 
   ngOnInit(): void {
-   this.topCollection=this.topService.getTopCollections()
+
   }
 
 }
+
