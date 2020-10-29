@@ -5,7 +5,7 @@ import { Component, OnInit, Input } from '@angular/core';
   template:  `
 
     <div>
-        <div>
+        <div [routerLink]="['/products', data.id]">
             <div class="product__list_card">
                 <div><img src={{data.imageUrl}} /></div>
                 <div class="product__details">
