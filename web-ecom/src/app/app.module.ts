@@ -18,6 +18,8 @@ import { TopComponent } from './products/top/top.component';
 import { RecommendedComponent } from './products/recommend/recommend.component';
 import { ProductDetailsComponent } from './products/product-details/product-details.component'
 import {ProductRouterActivate} from "./products/product-details/product-router.activate.service"
+import {AllProductService} from "./products/shared/dist/all.product.service"
+
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import {ProductRouterActivate} from "./products/product-details/product-router.a
     TopComponent,
     RecommendedComponent,
     ProductDetailsComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,8 @@ import {ProductRouterActivate} from "./products/product-details/product-router.a
     RouterModule
   ],
   providers: [
-    ProductService, 
+    ProductService,
+    AllProductService, 
     AuthService,
     ProductRouterActivate],
    

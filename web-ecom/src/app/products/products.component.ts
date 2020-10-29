@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {ProductService} from "./shared/product.service"
 import {TopService} from "../products/shared/top.service"
+import { RecommendedProduct } from '../products/shared/recommended.service';
+
 
 
 
@@ -83,8 +85,16 @@ import {TopService} from "../products/shared/top.service"
         </div>
       </div>
   </div>
-  <app-recommend></app-recommend>
-
+  <div class="container-fluid recommend_collection">
+    <h2 class="top__collection_header">Recommended Products</h2>
+      <div class="row">
+        <div class="col-sm-2 col-md-2" *ngFor="let recommended of recomProduct">
+          <app-recommend [recommend]="recommended"></app-recommend>
+        </div>
+      </div>
+  </div>
+    
+       
 
   <div>`,
   styleUrls: ['./products.component.css', './top/top.component.css']
@@ -92,15 +102,17 @@ import {TopService} from "../products/shared/top.service"
 export class ProductsComponent implements OnInit {
   products: any[]
   topCollection:any[]
+  recomProduct:any[]
 
-
-  constructor(private productservice: ProductService, private topservice:TopService) {
+  constructor(private productservice: ProductService, private topservice:TopService, private recomservice: RecommendedProduct) {
 
    }
 
   ngOnInit(): void {
    this.products = this.productservice.getProduct()
    this.topCollection = this.topservice.getTopCollections()
+   this.recomProduct=this.recomservice.getRecomProducts()
+   
   }
 
 }
