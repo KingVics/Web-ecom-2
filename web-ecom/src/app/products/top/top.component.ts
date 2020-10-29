@@ -6,8 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   template:  `
 
     <div>
-        <div>
-          
+        <div [routerLink]="['/products', top.id]">
             <div class="product__list_card">
             <div><img src="{{top.imageUrl}}" alt="" srcset=""></div>
                <div class="product_details">

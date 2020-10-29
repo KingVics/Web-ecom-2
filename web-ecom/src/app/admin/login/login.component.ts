@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
       this.service.AdminUserfromRemote(this.user).subscribe(
           data => {
               console.log("response received");
-              this.router.navigate(['/products'])
+              this.router.navigate(['admin/products'])
           },
           error => {
               console.log("expection occured");

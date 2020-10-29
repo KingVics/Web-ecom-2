@@ -10,14 +10,14 @@ export class TopService {
     return TOPCOLLECTIONS
   }
 
-  getTop(id:number) {
-    return TOPCOLLECTIONS.find(top => top.productId === id)
-  }
+  // getTop(cd:number) {
+  //   return TOPCOLLECTIONS.find(top => top.cd === cd)
+  // }
 }
 
 
 let TOPCOLLECTIONS = [{
-  productId: 7,
+  cd: 7,
   productName: "2020 Air Sneakers",
   productOrders: "",
   productReviews: "",
@@ -27,7 +27,7 @@ let TOPCOLLECTIONS = [{
   imageUrl: "../../../assets/topCollections/7.png"
 },
 {
-  productId: 8,
+  id: 8,
   productName: "BeatsbyDre Headphone",
   productOrders: "",
   productReviews: "",
@@ -37,7 +37,7 @@ let TOPCOLLECTIONS = [{
   imageUrl: "../../../assets/topCollections/8.png"
 },
 {
-  productId: 9,
+  id: 9,
   productName: "Samsung Note 20s",
   productOrders: "",
   productReviews: "",
@@ -47,7 +47,7 @@ let TOPCOLLECTIONS = [{
   imageUrl: "../../../assets/topCollections/9.png"
 },
 {
-  productId: 10,
+  id: 10,
   productName: "Luxury wrist watch",
   productOrders: "",
   productReviews: "",
@@ -57,7 +57,7 @@ let TOPCOLLECTIONS = [{
   imageUrl: "../../../assets/topCollections/10.png"
 },
 {
-  productId: 12,
+  id: 12,
   productName: "Women trendy shoes",
   productOrders: "",
   productReviews: "",
@@ -67,7 +67,7 @@ let TOPCOLLECTIONS = [{
   imageUrl: "../../../assets/topCollections/12.png"
 },
 {
- productId: 13,
+  id: 13,
   productName: "Air pod pro",
   productOrders: "",
   productReviews: "",
