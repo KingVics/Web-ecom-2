@@ -13,12 +13,12 @@ currentUser:IUSER
   constructor() { }
   login() {
     this.currentUser = {
-      id: "1",
-      firstname: 'Victor',
-      lastname: 'Papaya',
-      password:"hhhhhhh",
-      email:"jjjjjjjj",
-      phone: 9999999999999,
+      id: "",
+      firstname: '',
+      lastname: '',
+      password:"",
+      email:"",
+      phone: null
 
     }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { AuthService } from '../user/auth.service';
 import { Useri } from '../user/useri';
@@ -9,13 +9,11 @@ import { Useri } from '../user/useri';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent  {
   constructor(public auth:AuthService) {
 
    }
 
-  ngOnInit(): void {
-  }
-
+ 
 
 }
