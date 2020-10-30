@@ -19,6 +19,12 @@ border: 1px solid #707070;
 border-radius: 50px;
 opacity: 1;
 }
+
+@media(min-width:300px) and (max-width:600px) {
+  .overide {
+    display: none;
+  }
+}
 @media screen and (max-width:1168px){
   .shop{
     position: absolute;

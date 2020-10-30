@@ -36,17 +36,17 @@ export class LoginComponent implements OnInit {
     
     toggleLoading() {
       this.isLoading = true;
-      // this.auth.login()
-        this.service.loginUserfromRemote(this.user).subscribe(
-            data => {
-                console.log("response received");
-                this.router.navigate(['/products'])
-            },
-            error => {
-                console.log("expection occured");
-                this.msg="Please enter a valid credentials"
-            }
-        )
+      this.auth.login()
+      this.service.AdminUserfromRemote(this.user).subscribe(
+          data => {
+              console.log("response received");
+              this.router.navigate(['admin/products'])
+          },
+          error => {
+              console.log("expection occured");
+              this.msg="Please enter a valid credentials"
+          }
+      )
         setTimeout(() => {
           this.isLoading = false;
         }, 10000)

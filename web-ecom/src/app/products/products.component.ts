@@ -8,7 +8,8 @@ import {SamsungProduct} from "./shared/samsung.service"
 
 @Component({
   selector: 'app-products',
-  template:  `<div>
+  template:  `
+  <div>
   <app-carousel></app-carousel>
     <div class="container-fluid product_container">
       <div class="row">
@@ -108,7 +109,9 @@ import {SamsungProduct} from "./shared/samsung.service"
     
        
 
-  <div>`,
+  <div>
+  
+  `,
   styleUrls: ['./products.component.css', './top/top.component.css', './recommend/recommend.component.css']
 })
 export class ProductsComponent implements OnInit {

@@ -9,11 +9,13 @@ import { AuthService } from '../user/auth.service';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent  {
+export class NavbarComponent {
+  
+
   constructor(public auth:AuthService) {
 
    }
 
- 
+  
 
 }
