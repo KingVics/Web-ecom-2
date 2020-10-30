@@ -4,7 +4,7 @@
    max-width: 100%;
    height: min-content;
    overflow: hidden;
-   margin: 2rem;
+   margin: 0 2rem;
 }
 
 .footer__header_container,
@@ -128,7 +128,8 @@ li.footer_icon_twitter {
 @media (max-width:540px) {
     .footer_style {
         display: block;
-        text-align: center;   
+        text-align: center; 
+        margin-top: 4.5rem;  
     }
     .footer__header_container, .footer__content {
         padding-top: 1.5rem;

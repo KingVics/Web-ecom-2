@@ -58,3 +58,14 @@
     background: #F2F2F2 !important;
     color: #EB5926 !important;
 }
+
+@media (max-width: 540px) {
+    .product__details {
+        padding: 0;
+    
+    }
+    .product__details .product_details_content {
+        padding: 0;
+        margin-bottom: 0rem;
+    }
+}

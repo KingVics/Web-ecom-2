@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { AuthService } from '../user/auth.service';
-import { Useri } from '../user/useri';
+
 
 
 @Component({

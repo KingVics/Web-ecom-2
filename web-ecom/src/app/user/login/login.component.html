@@ -15,41 +15,59 @@
                         </div>     
                     </div>
                     <div class="">
-                        <form #loginForm="ngForm" (ngSubmit)="loginUser()" 
+                        <form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm)" 
                          autocomplete="off">
                             <small class="text-danger">{{msg}}</small>
                             <div class="login_input_container">
                                 <!-- <em *ngIf="loginForm.controls.email?.invalid && (loginForm.controls.email?.touched || mouseoverLogin)">Required</em> -->
                                 <input 
-                                    [(ngModel)]="user.email"
+                                    ngModel
                                     name="email"
-                                    placeholder="Email address" 
+                                    placeholder="Email address (Required)" 
+                                    appEmailvalidator
                                     type="email" 
                                     required
-                                    pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
                                     #email="ngModel"
-                                    [class.is-invalid]="email.invalid && email.touched"
+                                    [ngClass]="{'is-invalid': (email.touched || email.dirty) && !email.valid }"
                                     
                                 />
-                                <small class="text-danger" [class.d-none]="email.invalid || email.untouched">Please enter a valid email</small>
+                                <span class="invalid-feedback">
+                                    <span *ngIf="email.hasError('required')">
+                                      Email is required.
+                                    </span>
+                                    <span *ngIf="email.hasError('emailvalidator')">
+                                      Please provide a valid email address
+                                    </span>
+                                  </span>
                             </div>
                             <div class="login_input_container">
                                 <!-- <em *ngIf="loginForm.controls.password?.invalid && (loginForm.controls.password?.touched  || mouseoverLogin)">Required</em> -->
                                 <input 
-                                    [(ngModel)]="user.password"
+                                    ngModel
                                     name="password"
-                                    placeholder="Password" 
+                                    placeholder="Password (Required)" 
                                     type="password" 
                                     autocomplete="off"
                                     #password="ngModel"
-                                    [class.is-invalid]="password.invalid && password.touched"
+                                    [ngClass]="{'is-invalid': (password.touched || password.dirty) && !password.valid }" 
                                     
                                 />
-                                <small class="text-danger" [class.d-none]="password.invalid || password.untouched">Please enter a valid password</small>
+                                <span class="invalid-feedback">
+                                    <span *ngIf="password.hasError('required')">
+                                      Password is required.
+                                    </span>
+                                </span>
                             </div>
                             <div class="login_button">
                                 <!-- <span (mouseenter)="mouseoverLogin=true" (mouseleave)="mouseoverLogin=false"> -->
-                                <button onclick="submit">Login</button>
+                                    <button type="submit" (click)="toggleLoading()" [disabled] ="isLoading" >
+                                        <img 
+                                        *ngIf="isLoading"
+                                         src="../../../assets/spinner/ajax.gif" 
+                                         style="width:24px"
+                                        />
+                                        Login
+                                    </button>
                             </div>
                         </form>
                         <div class="login_forgot-password">

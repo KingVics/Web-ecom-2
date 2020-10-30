@@ -15,15 +15,22 @@
                         </div>     
                     </div>
                     <div class="">
-                        <form #RegisterForm="ngForm" (ngSubmit)="registerUser()">
+                        <form #registerForm="ngForm" [appMatchPassword]="['password', 'confirmPassword']"
+                        (ngSubmit)="registerForm.form.valid && onSubmit()" novalidate>
+                            <small class="text-danger">{{msg}}</small>
                             <div class="login_input_container">
                                 <input 
                                     placeholder="First Name" 
                                     name="firstname"
                                     type="text" 
                                     [(ngModel)]="user.firstname"
+                                    #name="ngModel" 
                                     required
                                 />
+                                <span class="text-danger"
+                                    *ngIf="(name.touched || registerForm.submitted) && name.errors?.required">
+                                    First Name is required
+                                </span>
                             </div>
                             <div class="login_input_container">
                                 <input 
@@ -31,8 +38,13 @@
                                     name="lastname"
                                     type="text" 
                                     [(ngModel)]="user.lastname"
+                                    #lname="ngModel"
                                     required
                                 />
+                                <span class="text-danger"
+                                    *ngIf="(lname.touched || registerForm.submitted) && lname.errors?.required">
+                                    Last Name is required
+                                </span>
                             </div>
                             <div class="login_input_container">
                                 <input 
@@ -41,6 +53,7 @@
                                     type="phone" 
                                     id="phone" 
                                     [(ngModel)]="user.phone"
+                                    required
                                     
                                 />
                             </div>
@@ -50,8 +63,16 @@
                                     name="email"
                                     type="email" 
                                     [(ngModel)]="user.email"
-                                    required
+                                    #email="ngModel"
+                                    required email
                                 />
+                                <span class="text-danger"
+                                    *ngIf="(email.touched || registerForm.submitted) && email.errors?.required">
+                                    Email is required
+                                </span>
+                                <span class="text-danger" *ngIf="email.touched && email.errors?.email">
+                                    Enter a valid email address
+                                </span>
                             </div>
                             <div class="login_input_container">
                                 <input 
@@ -60,19 +81,50 @@
                                     type="password" 
                                     [(ngModel)]="user.password"
                                     required
+                                    #password="ngModel" 
+                                    appPasswordPattern required
                                 />
+                                <span class="text-danger"
+                                    *ngIf="(password.touched || registerForm.submitted) && password.errors?.required">
+                                    Password is required
+                                </span>
+                                <span class="text-danger" *ngIf="password.touched && password.errors?.invalidPassword">
+                                    Password should have minimum 8 characters, at least 1 uppercase letter, 1 lowercase
+                                    letter and 1 number
+                                </span>
+                            </div>
+                            <div class="login_input_container">
+                                <input 
+                                    placeholder="Password" 
+                                    name="confirmPassword"
+                                    type="password" 
+                                    [(ngModel)]="user.confirmPassword"
+                                    required
+                                    #confirmPassword="ngModel" 
+                                    appPasswordPattern 
+                                    required
+                                />
+                                <span class="text-danger"
+                                    *ngIf="(confirmPassword.touched || registerForm.submitted) && confirmPassword.errors?.required">
+                                    Confirm Password is required
+                                </span>
+                                <span class="text-danger"
+                                    *ngIf="confirmPassword.touched && confirmPassword.errors?.passwordMismatch">
+                                    Passwords doesnot match
+                                </span>
                             </div>
                             <div class="login_button">
-                                <button [disabled]="RegisterForm.form.invalid" type="submit">Register</button>
+                                <button type="submit" (click)="toggleLoading()" [disabled] ="isLoading" >
+                                    <img 
+                                    *ngIf="isLoading"
+                                     src="../../../assets/spinner/ajax.gif" 
+                                     style="width:24px"
+                                    />
+                                    Register
+
+                                </button>
                             </div>
                         </form>
-                        <div class="register_checkbox">
-                            <input 
-                                type="checkbox" 
-                                id="checkbox" 
-                            />
-                            <p>I agree to the terms and conditions</p>
-                        </div>
                     </div>
                 </div>
             </div>

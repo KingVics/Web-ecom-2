@@ -21,6 +21,9 @@ import {ProductRouterActivate} from "./products/product-details/product-router.a
 import {AllProductService} from "./products/shared/dist/all.product.service"
 import {SamsungRecommendedComponent} from "./products/recommend/recommended.samsung.componet"
 import {SamsungProduct} from "./products/shared/samsung.service"
+import {EmailvalidatorDirective} from "./user/email.validator"
+
+
 
 
 @NgModule({
@@ -35,7 +38,11 @@ import {SamsungProduct} from "./products/shared/samsung.service"
     TopComponent,
     RecommendedComponent,
     ProductDetailsComponent,
-    SamsungRecommendedComponent
+    SamsungRecommendedComponent,
+    EmailvalidatorDirective
+ 
+  
+    
     
   ],
   imports: [

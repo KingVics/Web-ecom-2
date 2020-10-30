@@ -80,7 +80,7 @@
 .login_input_container input[type="text"]:focus,
 .login_input_container input[type="password"]:focus,
 .login_input_container input[type="email"]:focus,
-.login_input_container input[type="phone"] {
+.login_input_container input[type="phone"]:focus {
     border-color: #EB5926;
     box-shadow: 0 0 8px 0 #EB5926;
     outline: none;
