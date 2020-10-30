@@ -90,85 +90,18 @@
   top: 28px !important;
   left: 80rem !important;
 }    
-@media screen and (max-width:823px){
+
+@media (max-width:468px) {
+  .sm {
+    display: none;
+  }
+}
+@media screen and (max-width:600px){
   .input-group{
    display: none;
   }
-}
-
-
-.form-inline-lg .form-control-lg {
-  display: inline-block;
-  width: auto;
-  vertical-align: middle;
-  background: #FFFFFF 0% 0% no-repeat padding-box;
-  border: 1px solid #B4B4B4;
-  border-radius: 15px;
-  opacity: 1;
-}
-
-@media screen and (max-width:559px){
-.navbar-t {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: left;
-}
-
-.display-inline{
-  position: absolute;
-  list-style-type: none;
-  right: .5em;
-  top: -.6em;
-}
-
-.nav-left{
-  margin: 1.2em 0 0 1em;
-}
-
-}
-
-@media screen and (max-width:422px){
-  .display-inline{
-    position: absolute;
-      list-style-type: none;
-      right: .1em;
-      top: -.6em;
-      margin-top: .5em;
-
-    }
-    .container-fluid{
-      height: 51px;
-    }
-    .nav-left{
-      font-size:15px ;
-      margin: 1.2em 0 0 1em;
-    }
-}
-@media screen and (max-width:373px){
-  .sm{
-    width: 58px;
-    height: 51px;
-  }
-  .sm-2{
-    width: 120px;
-    height: 51px;
-
-  }
-
-}
-
-@media screen and (min-width:823px){
-  .form-inline-lg .form-control-lg {
+  .nav-left{
     display: none;
-    width: auto;
-    vertical-align: middle;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    border: 1px solid #B4B4B4;
-    border-radius: 15px;
-    opacity: 1;
-}
-
+  }
 }
 

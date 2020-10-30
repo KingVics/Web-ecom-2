@@ -1,0 +1,55 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav 
+      #drawer 
+      class="sidenav" 
+      fixedInViewport="true"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#">Men</a>
+      <a mat-list-item href="#">Women</a>
+      <a mat-list-item href="#">Electronics</a>
+      <a mat-list-item href="#">Home & Office</a>
+      <a mat-list-item href="#">Phones</a>
+      <a mat-list-item href="#">Gaming</a>
+      <a mat-list-item href="#">Sport</a>
+      <a mat-list-item href="#">Automobile</a>
+      <a mat-list-item href="#">Food & Drinks</a>
+      <form class="form-inline  center-sm">
+        <div class="input-group md-form form-sm form-1 pl-0">
+          <div class="input-group-prepend">
+          </div>
+          <input class="form-control my-0 py-1" type="text" placeholder="Search for a product" aria-label="Search">
+        </div>
+      </form>
+      <a  mat-list-item  class=" overide_profile" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <img src="assets/profile/profile.svg"  alt="profile"/>
+     </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <a mat-list-item href="#">Men</a>
+      <a mat-list-item href="#">Women</a>
+      <a mat-list-item href="#">Electronics</a>
+      <a mat-list-item href="#">Home & Office</a>
+      <a mat-list-item href="#">Phones</a>
+      <a mat-list-item href="#">Gaming</a>
+      <a mat-list-item href="#">Sport</a>
+      <a mat-list-item href="#">Automobile</a>
+      <a mat-list-item href="#">Food & Drinks</a>
+  
+    </mat-toolbar>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

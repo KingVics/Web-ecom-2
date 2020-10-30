@@ -21,7 +21,15 @@ import {ProductRouterActivate} from "./products/product-details/product-router.a
 import {AllProductService} from "./products/shared/dist/all.product.service"
 import {SamsungRecommendedComponent} from "./products/recommend/recommended.samsung.componet"
 import {SamsungProduct} from "./products/shared/samsung.service"
-import {EmailvalidatorDirective} from "./user/email.validator"
+import {EmailvalidatorDirective} from "./user/email.validator";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list'
 
 
 
@@ -39,7 +47,8 @@ import {EmailvalidatorDirective} from "./user/email.validator"
     RecommendedComponent,
     ProductDetailsComponent,
     SamsungRecommendedComponent,
-    EmailvalidatorDirective
+    EmailvalidatorDirective,
+    MainNavComponent
  
   
     
@@ -50,7 +59,14 @@ import {EmailvalidatorDirective} from "./user/email.validator"
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
-    RouterModule
+    RouterModule,
+    BrowserAnimationsModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [
     ProductService,
