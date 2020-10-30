@@ -4,6 +4,7 @@ import {HttpClient} from "@angular/common/http"
 import {RegistrationService} from "../registration.service"
 import { IUSER } from '../user.model'
 import { AuthService } from "../auth.service"
+import { NgForm } from '@angular/forms'
 
 @Component({
   selector: 'app-login',
@@ -11,12 +12,10 @@ import { AuthService } from "../auth.service"
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-    email
-    password
-    mouseoverLogin  
     user = new IUSER();
     msg ="";
-
+    errorMessage: string;
+    isLoading = false; 
 
     constructor(private service:RegistrationService, private router:Router, private http:HttpClient, private auth:AuthService) {}
 
@@ -24,8 +23,20 @@ export class LoginComponent implements OnInit {
 
     }
 
-    loginUser() {
-        this.auth.login()
+    loginUser(loginForm: NgForm) {
+      if(loginForm && loginForm.valid) {
+        const email = loginForm.form.value.email;
+        const password = loginForm.form.value.password;
+      }
+      else {
+        this.errorMessage = 'Please enter email and password.';
+      }
+        
+    }
+    
+    toggleLoading() {
+      this.isLoading = true;
+      // this.auth.login()
         this.service.loginUserfromRemote(this.user).subscribe(
             data => {
                 console.log("response received");
@@ -36,5 +47,8 @@ export class LoginComponent implements OnInit {
                 this.msg="Please enter a valid credentials"
             }
         )
+        setTimeout(() => {
+          this.isLoading = false;
+        }, 10000)
     }
 }
