@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {ProductService} from "./shared/product.service"
 import {TopService} from "../products/shared/top.service"
 import { RecommendedProduct } from '../products/shared/recommended.service';
-
+import {SamsungProduct} from "./shared/samsung.service"
 
 
 
@@ -91,20 +91,34 @@ import { RecommendedProduct } from '../products/shared/recommended.service';
         <div class="col-sm-2 col-md-2" *ngFor="let recommended of recomProduct">
           <app-recommend [recommend]="recommended"></app-recommend>
         </div>
+        <div class="product__banner_advert product_banner_container">
+          <div class="row">
+          <div class="col-sm-12 col-md-12 product__product_image">
+            <img src="../../../assets/banners/samsung.png"/>
+          </div>
+        </div>
       </div>
-  </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2 col-md-2" *ngFor="let samOfficial of official">
+          <app-samsung [samsung]="samOfficial"></app-samsung>
+      </div>
+    </div>
+</div>
     
        
 
   <div>`,
-  styleUrls: ['./products.component.css', './top/top.component.css']
+  styleUrls: ['./products.component.css', './top/top.component.css', './recommend/recommend.component.css']
 })
 export class ProductsComponent implements OnInit {
+  @Input() recommend:any;
   products: any[]
   topCollection:any[]
   recomProduct:any[]
+  official:any[]
 
-  constructor(private productservice: ProductService, private topservice:TopService, private recomservice: RecommendedProduct) {
+  constructor(private productservice: ProductService, private topservice:TopService, private recomservice: RecommendedProduct, private samservice:SamsungProduct) {
 
    }
 
@@ -112,6 +126,7 @@ export class ProductsComponent implements OnInit {
    this.products = this.productservice.getProduct()
    this.topCollection = this.topservice.getTopCollections()
    this.recomProduct=this.recomservice.getRecomProducts()
+   this.official =  this.samservice.samRecomProducts()
    
   }
 

@@ -17,6 +17,7 @@ import { Component, OnInit, Input} from '@angular/core';
      </div>
    </div>
  </div>
+ 
  <div>
 `,
   styleUrls: ['./recommend.component.css', '../top/top.component.css']
