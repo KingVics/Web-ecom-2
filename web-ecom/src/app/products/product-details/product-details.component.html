@@ -17,8 +17,17 @@
                         <span>{{product?.starRating}}</span>
                     </div>
                     <div class="product__details_price"><h3>₦{{product?.price}}</h3></div>
-                    <div class="product__details_color"><h3>Color:</h3></div>
-                    <div class="product__details_quantity"><h3>Quanity</h3></div>
+                    <div class="product__details_color"><h3>Color:</h3>
+                    <button class="color"></button>
+                    <button class="color_black"></button>
+                    <button class="color_orange"></button>
+                    <button class="color__"></button>
+                    </div>
+                    <div class="product__details_quantity"><h3>Quanity:</h3>
+                    <button type="button" class="quantity__btn" (click)="minus()"><i class="fa fa-minus"></i></button>
+                    <input type="text" [value]="quantity" style="outline: 0; width: 5%; border: 0;" />
+                    <button type="button" class="quantity__btn" (click)="plus()"><i class="fa fa-plus"></i></button>
+                    </div>
                     <div class="product__details_button">
                         <button>Buy Now</button>
                         <button class="product__details_button_buy">Add to Cart</button> 

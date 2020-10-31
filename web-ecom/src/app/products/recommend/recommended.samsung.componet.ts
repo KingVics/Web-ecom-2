@@ -12,7 +12,7 @@ import { Component, OnInit, Input} from '@angular/core';
           <span>{{samsung.productName}}</span>
         </div>
         <div class="product_price">
-          <span>{{samsung.price}}</span>
+          <span>₦{{samsung.price}}</span>
         </div>
       </div>
   </div>

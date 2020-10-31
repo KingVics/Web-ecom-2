@@ -23,5 +23,18 @@ export class ProductDetailsComponent  implements OnInit{
         this.product = this.eventService.getProducts(+this.route.snapshot.params['id'])
 
     }
-     
+     quantity:number = 0;
+     i=0;
+     plus() {
+         if(this.i !=10) {
+             this.i++;
+             this.quantity = this.i;
+         }
+     }
+     minus() {
+         if(this.i !=0) {
+             this.i--;
+             this.quantity=this.i;
+         }
+     }
 }
