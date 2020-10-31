@@ -105,3 +105,10 @@
   }
 }
 
+@media (max-width:768px) {
+  .py-1 {
+    margin-right: -7rem;
+    margin-bottom: 1rem;
+  }
+}
+
