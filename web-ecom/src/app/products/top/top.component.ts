@@ -14,7 +14,7 @@ import { Component, OnInit, Input } from '@angular/core';
                      <span>{{top.productName}}</span>
                     </div>
                 <div class="product_price">
-                     <span>{{top.price}}</span>
+                     <span>₦{{top.price}}</span>
               </div>
              </div>
             <div> 

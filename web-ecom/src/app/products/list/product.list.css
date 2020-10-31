@@ -40,3 +40,8 @@
   padding: .1rem;
 }
 
+@media (max-width: 540px) {
+  .product__list_card {
+    padding: .5rem 0;
+  }
+}
