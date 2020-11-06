@@ -23,6 +23,10 @@ currentUser:IUSER
     }
 }
 
+logout() {
+  
+}
+
 isLoggedIn() {
     return !!this.currentUser;
 }

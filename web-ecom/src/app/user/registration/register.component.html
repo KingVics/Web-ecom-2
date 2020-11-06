@@ -93,7 +93,7 @@
                                     letter and 1 number
                                 </span>
                             </div>
-                            <div class="login_input_container">
+                            <!-- <div class="login_input_container">
                                 <input 
                                     placeholder="Password" 
                                     name="confirmPassword"
@@ -112,7 +112,7 @@
                                     *ngIf="confirmPassword.touched && confirmPassword.errors?.passwordMismatch">
                                     Passwords doesnot match
                                 </span>
-                            </div>
+                            </div> -->
                             <div class="login_button">
                                 <button type="submit" (click)="toggleLoading()" [disabled] ="isLoading" >
                                     <img 

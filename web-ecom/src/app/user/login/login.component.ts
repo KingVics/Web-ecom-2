@@ -23,21 +23,12 @@ export class LoginComponent implements OnInit {
 
     }
 
-    loginUser(loginForm: NgForm) {
-      if(loginForm && loginForm.valid) {
+    loginUser(loginForm:NgForm) {
+       if(loginForm && loginForm.valid) {
         const email = loginForm.form.value.email;
         const password = loginForm.form.value.password;
-      }
-      else {
-        this.errorMessage = 'Please enter email and password.';
-      }
-        
-    }
-    
-    toggleLoading() {
-      this.isLoading = true;
-      this.auth.login()
-      this.service.AdminUserfromRemote(this.user).subscribe(
+        this.auth.login()
+        this.service.loginUserfromRemote(this.user).subscribe(
           data => {
               console.log("response received");
               this.router.navigate(['/products'])
@@ -45,8 +36,19 @@ export class LoginComponent implements OnInit {
           error => {
               console.log("expection occured");
               this.msg="Please enter a valid credentials"
-          }
-      )
+          })
+        }    
+      else {
+        this.msg = "Please try again"
+      }
+    
+        
+    }
+    
+    toggleLoading() {
+      this.isLoading = true;
+      this.auth.login()
+      
         setTimeout(() => {
           this.isLoading = false;
         }, 10000)
