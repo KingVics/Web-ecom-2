@@ -21,9 +21,9 @@ opacity: 1;
 }
 
 @media(min-width:300px) and (max-width:600px) {
-  .overide {
+  /* .overide {
     display: none;
-  }
+  } */
 }
 @media screen and (max-width:1168px){
   .shop{
