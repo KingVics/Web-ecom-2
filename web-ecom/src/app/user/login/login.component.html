@@ -15,18 +15,18 @@
                         </div>     
                     </div>
                     <div class="">
-                        <form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm)" 
+                        <form  #loginForm="ngForm" (ngSubmit)="loginUser(loginForm)" 
                          autocomplete="off">
                             <small class="text-danger">{{msg}}</small>
                             <div class="login_input_container">
                                 <!-- <em *ngIf="loginForm.controls.email?.invalid && (loginForm.controls.email?.touched || mouseoverLogin)">Required</em> -->
                                 <input 
-                                    ngModel
                                     name="email"
-                                    placeholder="Email address (Required)" 
-                                    appEmailvalidator
-                                    type="email" 
+                                    [(ngModel)]="user.email"
+                                    placeholder="Email address"
+                                    type="email"
                                     required
+                                    pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
                                     #email="ngModel"
                                     [ngClass]="{'is-invalid': (email.touched || email.dirty) && !email.valid }"
                                     
@@ -43,10 +43,10 @@
                             <div class="login_input_container">
                                 <!-- <em *ngIf="loginForm.controls.password?.invalid && (loginForm.controls.password?.touched  || mouseoverLogin)">Required</em> -->
                                 <input 
-                                    ngModel
                                     name="password"
-                                    placeholder="Password (Required)" 
-                                    type="password" 
+                                    [(ngModel)]="user.password"
+                                    placeholder="Password"
+                                    type="password"
                                     autocomplete="off"
                                     #password="ngModel"
                                     [ngClass]="{'is-invalid': (password.touched || password.dirty) && !password.valid }" 
@@ -61,11 +61,11 @@
                             <div class="login_button">
                                 <!-- <span (mouseenter)="mouseoverLogin=true" (mouseleave)="mouseoverLogin=false"> -->
                                     <button type="submit"  >
-                                        <!-- <img 
+                                        <img 
                                         *ngIf="isLoading"
                                          src="../../../assets/spinner/ajax.gif" 
                                          style="width:24px"
-                                        /> -->
+                                        />
                                         Login
                                     </button>
                             </div>

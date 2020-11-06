@@ -13,7 +13,7 @@ import {SamsungProduct} from "./shared/samsung.service"
   <app-carousel></app-carousel>
     <div class="container-fluid product_container">
       <div class="row">
-        <div class="col-sm-2 col-md-4" *ngFor="let product_entry of products">
+        <div class="col-sm-2 col-md-4 col-lg-2" *ngFor="let product_entry of products">
           <app-list [data]="product_entry"></app-list>
         </div>
       </div>
@@ -81,7 +81,7 @@ import {SamsungProduct} from "./shared/samsung.service"
   <div class="container-fluid top_collection">
      <h2 class="top__collection_header">Top Collection</h2>
       <div class="row">
-        <div class="col-sm-2 col-md-4" *ngFor="let top of topCollection">
+        <div class="col-sm-2 col-md-4 col-lg-2" *ngFor="let top of topCollection">
           <app-top [top]="top"></app-top>
         </div>
       </div>
@@ -89,7 +89,7 @@ import {SamsungProduct} from "./shared/samsung.service"
   <div class="container-fluid recommend_collection">
     <h2 class="top__collection_header">Recommended Products</h2>
       <div class="row">
-        <div class="col-sm-2 col-md-4" *ngFor="let recommended of recomProduct">
+        <div class="col-sm-2 col-md-4 col-lg-2" *ngFor="let recommended of recomProduct">
           <app-recommend [recommend]="recommended"></app-recommend>
         </div>
         <div class="product__banner_advert product_banner_container">
@@ -101,7 +101,7 @@ import {SamsungProduct} from "./shared/samsung.service"
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-2 col-md-4" *ngFor="let samOfficial of official">
+      <div class="col-sm-2 col-md-4 col-lg-2" *ngFor="let samOfficial of official">
           <app-samsung [samsung]="samOfficial"></app-samsung>
       </div>
     </div>
