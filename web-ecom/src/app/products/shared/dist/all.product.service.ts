@@ -34,7 +34,7 @@ let PRODUCTS = [{
 },
 {
   id: 4,
-  productName: "SAMSUNG Galaxy Note S8 Pro",
+  productName: "SAMSUNG Galaxy Note S8",
   productOrders: "14523 Orders |  ",
   productReviews: "524 Reviews | ",
   description: "The Galaxy Note 8 is a terrific phone in 2018, with dual cameras and a boatload of stylus tricks.",

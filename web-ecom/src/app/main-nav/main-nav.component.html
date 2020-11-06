@@ -24,9 +24,23 @@
           <input class="form-control my-0 py-1" type="text" placeholder="Search for a product" aria-label="Search">
         </div>
       </form>
-      <a  mat-list-item  class=" overide_profile" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <img src="assets/profile/profile.svg"  alt="profile"/>
-     </a>
+     <li mat-list-item  >
+      <a mat-list-item  *ngIf="!auth.isLoggedIn()" [routerLink]="['user/login']" >Sign In </a>
+        <div class="dropdown show" *ngIf="auth.isLoggedIn()">   
+          <a class="dropdown-btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src="assets/profile/profile.svg"  alt="profile"/>
+          </a>
+        
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </div>
+    </li>
+    <li>
+      <a  mat-list-item *ngIf="!auth.isLoggedIn()" [routerLink]="['user/register']">Register</a>
+    </li>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
