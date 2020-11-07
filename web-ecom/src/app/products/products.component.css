@@ -71,6 +71,10 @@
 }
 
 @media (max-width: 768px) {
+
+    .col-md-4 {
+        padding-top: 15px;
+    }
     .product__banner_items {
         margin-top: 8px;
         padding: 8px;
