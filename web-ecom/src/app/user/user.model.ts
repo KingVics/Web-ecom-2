@@ -4,6 +4,5 @@ export class IUSER {
     password: string;
     email:string;
     phone: number;
-    confirmPassword: string;
     constructor() {} 
 }

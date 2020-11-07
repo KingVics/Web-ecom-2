@@ -16,7 +16,6 @@ currentUser:IUSER
       firstname: '',
       lastname: '',
       password:"",
-      confirmPassword: '',
       email:"",
       phone: null
 
